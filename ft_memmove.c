@@ -6,7 +6,7 @@
 /*   By: yaimghar <yaimghar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 10:12:01 by yaimghar          #+#    #+#             */
-/*   Updated: 2025/10/17 18:25:44 by yaimghar         ###   ########.fr       */
+/*   Updated: 2025/10/20 13:32:03 by yaimghar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ void *ft_memmove(void *dest, const void *src, size_t n)
 int main()
 {
     char str[] = "YASSINE";
-
     ft_memmove(str + 2, str, 4);  
 
     printf("after memmove: %s\n", str);

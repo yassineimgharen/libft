@@ -6,7 +6,7 @@
 /*   By: yaimghar <yaimghar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 10:58:25 by yaimghar          #+#    #+#             */
-/*   Updated: 2025/10/17 18:25:27 by yaimghar         ###   ########.fr       */
+/*   Updated: 2025/10/20 15:37:34 by yaimghar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ char		*ft_itoa(int nbr)
         sign = -1;
     else
         sign = 1;
+		
 	len = ft_len(nbr);
 	tab = (char *)malloc(sizeof(char) * len + 1);
 	tab[len] = '\0';
@@ -62,7 +63,7 @@ char		*ft_itoa(int nbr)
 #include <stdio.h>
 int main ()
 {
-    int num = -123;
+    int num = -17;
     printf("%s\n", ft_itoa(num));
     return 0;
 }

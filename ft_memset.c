@@ -6,7 +6,7 @@
 /*   By: yaimghar <yaimghar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 09:47:31 by yaimghar          #+#    #+#             */
-/*   Updated: 2025/10/17 18:25:47 by yaimghar         ###   ########.fr       */
+/*   Updated: 2025/10/21 09:16:16 by yaimghar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,5 @@ void * ft_memset( void * pointer, int value, size_t count )
 #include <stdio.h>
 int main ()
 {
-    char name[8] = "yassine";
-    char *p = (char *)ft_memset(name, 'c', 3);
-
-    printf("%s\n", name);
+    
 }

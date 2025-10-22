@@ -6,7 +6,7 @@
 /*   By: yaimghar <yaimghar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 14:16:20 by yaimghar          #+#    #+#             */
-/*   Updated: 2025/10/17 18:25:13 by yaimghar         ###   ########.fr       */
+/*   Updated: 2025/10/20 15:28:16 by yaimghar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,9 @@ int ft_isalpha(int c)
 }	
 int main ()
 {
-	printf("%d",ft_isalpha('A'));
+	printf("%d",ft_isalpha(55));
 }
+
+// can i give a number (kbir) and this n
+//umber can overlfow and chaged to  s
+//mall number in my range and give me 1

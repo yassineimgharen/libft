@@ -6,7 +6,7 @@
 /*   By: yaimghar <yaimghar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 10:25:46 by yaimghar          #+#    #+#             */
-/*   Updated: 2025/10/19 12:30:01 by yaimghar         ###   ########.fr       */
+/*   Updated: 2025/10/22 13:24:32 by yaimghar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +29,19 @@ void ft_lstadd_back(t_list **lst, t_list *new)
         tmp = tmp->next;
     tmp->next = new;
 }
-int main ()
-{
-    t_list *head = NULL;
-    t_list *node1 = ft_lstnew("1");
+// int main ()
+// {
+//     t_list *head = NULL;
+//     t_list *node1 = ft_lstnew("1");
+//     t_list *node2 = ft_lstnew("2");
 
-    ft_lstadd_back(&head, node1);
     
-    printf("%s\n", head->content);
-    printf("%s\n", head->next->content);
+//     ft_lstadd_back(&head, node1);
+//     ft_lstadd_back(&head, node2);
 
-    return 0;
-}
+    
+//     printf("%s\n", head->content);
+//     printf("%s\n", head->next->content);
+
+//     return 0;
+// }
