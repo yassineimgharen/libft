@@ -6,7 +6,7 @@
 /*   By: yaimghar <yaimghar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 10:58:25 by yaimghar          #+#    #+#             */
-/*   Updated: 2025/10/20 15:37:34 by yaimghar         ###   ########.fr       */
+/*   Updated: 2025/10/25 14:00:05 by yaimghar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,19 @@
 
 int	ft_abs(long int nbr)
 {
-    if (nbr < 0)
-        return -nbr;
-    return nbr;
+	if (nbr < 0)
+		return (-nbr);
+	return (nbr);
 }
 
-int			ft_len(long int nbr)
+int	ft_len(long int nbr)
 {
 	int	len;
 
-    if (nbr <= 0)
-        len = 1;
-    else 
-        len = 0;
+	if (nbr <= 0)
+		len = 1;
+	else
+		len = 0;
 	while (nbr != 0)
 	{
 		nbr = nbr / 10;
@@ -35,17 +35,16 @@ int			ft_len(long int nbr)
 	return (len);
 }
 
-char		*ft_itoa(int nbr)
+char	*ft_itoa(int nbr)
 {
 	int		len;
 	int		sign;
 	char	*tab;
 
-    if (nbr < 0)
-        sign = -1;
-    else
-        sign = 1;
-		
+	if (nbr < 0)
+		sign = -1;
+	else
+		sign = 1;
 	len = ft_len(nbr);
 	tab = (char *)malloc(sizeof(char) * len + 1);
 	tab[len] = '\0';
@@ -59,11 +58,4 @@ char		*ft_itoa(int nbr)
 	if (sign == -1)
 		tab[0] = '-';
 	return (tab);
-}
-#include <stdio.h>
-int main ()
-{
-    int num = -17;
-    printf("%s\n", ft_itoa(num));
-    return 0;
 }

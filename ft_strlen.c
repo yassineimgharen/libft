@@ -6,7 +6,7 @@
 /*   By: yaimghar <yaimghar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 10:33:23 by yaimghar          #+#    #+#             */
-/*   Updated: 2025/10/17 18:26:27 by yaimghar         ###   ########.fr       */
+/*   Updated: 2025/10/24 14:39:01 by yaimghar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ size_t ft_strlen(const char *str)
     return len;
 }
 
-int main ()
-{
-    char name[] = "yassine";
-    printf("%d\n", ft_strlen(name));
-    return 0;
-}
+// int main ()
+// {
+//     char name[] = "yassine";
+//     printf("%d\n", ft_strlen(name));
+//     return 0;
+// }

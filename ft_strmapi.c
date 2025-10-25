@@ -6,47 +6,37 @@
 /*   By: yaimghar <yaimghar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 11:34:57 by yaimghar          #+#    #+#             */
-/*   Updated: 2025/10/17 18:26:35 by yaimghar         ###   ########.fr       */
+/*   Updated: 2025/10/25 13:31:51 by yaimghar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 // char kbr(unsigned int raqm, char hrf)
 // {
-//     if (raqm >= 1)
+//     if (raqm % 2 == 0)
 //         hrf = 'D';
-//     return hrf;
+//     return (hrf);
 // }
-char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-    int len;
-    int i;
-    
-    if (!s || !f)
-        return NULL;
-    len = 0;
-    while (s[len])
-        len++;
-    
-    char *tab = malloc(sizeof(char) * (len + 1));
-    if (!tab)
-        return (NULL);
-    i = 0;
-    while (s[i])
-    {
-        tab[i] = f(i, s[i]);
-        i++;
-    }
-    tab[i] = '\0';
-    return tab;
-}
+	int		len;
+	int		i;
+	char	*tab;
 
-#include <stdio.h>
-int main ()
-{
-    char const *s = "yassine";
-    char *t = ft_strmapi(s, kbr);
-    printf("%s\n", t);
+	if (!s || !f)
+		return (NULL);
+	len = 0;
+	while (s[len])
+		len++;
+	tab = malloc(sizeof(char) * (len + 1));
+	if (!tab)
+		return (NULL);
+	i = 0;
+	while (s[i])
+	{
+		tab[i] = f(i, s[i]);
+		i++;
+	}
+	tab[i] = '\0';
+	return (tab);
 }
-// s: The string to iterate over.
-// f: The function to apply to each character.

@@ -6,19 +6,13 @@
 /*   By: yaimghar <yaimghar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 09:27:01 by yaimghar          #+#    #+#             */
-/*   Updated: 2025/10/17 18:25:21 by yaimghar         ###   ########.fr       */
+/*   Updated: 2025/10/23 14:35:13 by yaimghar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isdigit( int c)
+int	ft_isdigit( int c)
 {
-    return (c >= '0' && c <= '9');
+	return (c >= '0' && c <= '9');
 }
-// int main ()
-// {
-//     // int i = isdigit(8);
-//     int mine = ft_isdigit('0');
-//     printf("%d\n", mine);
-// }

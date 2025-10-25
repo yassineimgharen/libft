@@ -6,25 +6,19 @@
 /*   By: yaimghar <yaimghar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 15:12:18 by yaimghar          #+#    #+#             */
-/*   Updated: 2025/10/17 18:26:02 by yaimghar         ###   ########.fr       */
+/*   Updated: 2025/10/25 15:35:49 by yaimghar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
-    if (!s)
-        return;
-    while (*s != '\0')
-    {
-        write(fd, s, 1);
-        s++;
-    }
-}
-#include <stdio.h>
-int main ()
-{
-    char name[7] = "yassine";
-    ft_putstr_fd(name, 0);
+	if (!s)
+		return ;
+	while (*s != '\0')
+	{
+		write(fd, s, 1);
+		s++;
+	}
 }
