@@ -6,7 +6,7 @@
 /*   By: yaimghar <yaimghar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 16:20:53 by yaimghar          #+#    #+#             */
-/*   Updated: 2025/10/24 20:33:40 by yaimghar         ###   ########.fr       */
+/*   Updated: 2025/10/26 09:16:23 by yaimghar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-// #include <stdio.h>
-// int main ()
-// { 
-// 	printf("%d\n", ft_memcmp("abcg", "abvf", 4));
-// 	return 0;
-// }

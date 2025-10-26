@@ -6,23 +6,18 @@
 /*   By: yaimghar <yaimghar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 10:33:23 by yaimghar          #+#    #+#             */
-/*   Updated: 2025/10/24 14:39:01 by yaimghar         ###   ########.fr       */
+/*   Updated: 2025/10/26 09:17:20 by yaimghar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlen(const char *str)
+size_t	ft_strlen(const char *str)
 {
-    size_t len = 0;
-    while (str[len])
-        len++;
-    return len;
-}
+	size_t	len;
 
-// int main ()
-// {
-//     char name[] = "yassine";
-//     printf("%d\n", ft_strlen(name));
-//     return 0;
-// }
+	len = 0;
+	while (str[len])
+		len++;
+	return (len);
+}

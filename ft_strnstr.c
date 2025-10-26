@@ -6,37 +6,29 @@
 /*   By: yaimghar <yaimghar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 17:23:36 by yaimghar          #+#    #+#             */
-/*   Updated: 2025/10/24 21:16:52 by yaimghar         ###   ########.fr       */
+/*   Updated: 2025/10/26 09:18:09 by yaimghar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *str, const char *to_find, size_t len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	int	i;
-	int	j;
+	size_t	i;
+	size_t	j;
 
-	if (!*to_find)
-		return ((char *)str);
+	if (*needle == '\0')
+		return ((char *)haystack);
 	i = 0;
-	while (str[i] && len != 0)
+	while (haystack[i] && i < len)
 	{
 		j = 0;
-		while (str[i + j] && to_find[j] && str[i + j] == to_find[j])
+		while (haystack[i + j] && needle[j] && haystack[i + j] == needle[j]
+			&& (i + j) < len)
 			j++;
-		if (to_find[j] == '\0')
-			return ((char *)str + i);
+		if (needle[j] == '\0')
+			return ((char *)haystack + i);
 		i++;
-		len--;
 	}
-	return (0);
+	return (NULL);
 }
-// #include <stdio.h>
-// int main()
-// {
-// 	char str[] = "yassine@gmail.com";
-// 	char tofind[] = "ne";
-// 	printf("%s\n", ft_strnstr(str, tofind, 15));
-// 	return 0;
-// }

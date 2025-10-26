@@ -6,7 +6,7 @@
 /*   By: yaimghar <yaimghar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 13:33:54 by yaimghar          #+#    #+#             */
-/*   Updated: 2025/10/24 17:41:19 by yaimghar         ###   ########.fr       */
+/*   Updated: 2025/10/26 09:18:12 by yaimghar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,3 @@ char	*ft_strrchr(const char *s, int c)
 		return ((char *)s + ft_strlen(s));
 	return (NULL);
 }
-// #include <stdio.h>
-// int main()
-// {
-//     char str[] = "yaassine"; 
-//     const char *p = ft_strrchr(str, 'a');
-//     if (p != NULL)
-//         printf("%s\n", p); 
-//     else
-//         printf("makaynch (not found)\n"); 
-// }

@@ -6,16 +6,11 @@
 /*   By: yaimghar <yaimghar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 09:30:12 by yaimghar          #+#    #+#             */
-/*   Updated: 2025/10/25 19:00:26 by yaimghar         ###   ########.fr       */
+/*   Updated: 2025/10/26 09:12:18 by yaimghar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-// void	del(void *content)
-// {
-// 	free(content);
-// }
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
@@ -34,18 +29,3 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	}
 	*lst = NULL;
 }
-// int	main(void)
-// {
-// 	t_list *list = NULL;
-
-// 	list = ft_lstnew(ft_strdup("Node 1"));
-// 	list->next = ft_lstnew(ft_strdup("Node 2"));
-// 	list->next->next = ft_lstnew(ft_strdup("Node 3"));
-
-// 	ft_lstclear(&list, del);
-
-// 	if (list == NULL)
-// 		printf("List cleared!\n");
-// 	else
-// 		printf("List not cleared\n");
-// }

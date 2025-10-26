@@ -6,7 +6,7 @@
 /*   By: yaimghar <yaimghar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 18:03:34 by yaimghar          #+#    #+#             */
-/*   Updated: 2025/10/24 09:12:27 by yaimghar         ###   ########.fr       */
+/*   Updated: 2025/10/26 09:05:04 by yaimghar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,3 @@ void	ft_bzero(void *s, size_t n)
 		n--;
 	}
 }
-// #include <stdio.h>
-// int main() {
-// 	char buffer[6] = {41,'b','c',10,'e','f'};
-// 	ft_bzero(buffer, 3);
-// 	for(int i = 0; i < 6; i++)
-// 		printf("%d ", buffer[i]);
-// }

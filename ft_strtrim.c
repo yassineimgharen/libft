@@ -6,20 +6,20 @@
 /*   By: yaimghar <yaimghar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 09:55:06 by yaimghar          #+#    #+#             */
-/*   Updated: 2025/10/25 11:48:16 by yaimghar         ###   ########.fr       */
+/*   Updated: 2025/10/26 09:18:57 by yaimghar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	checkset(char c, char const *set)
+int	is_in_set(char c, char const *set)
 {
 	int	i;
 
 	i = 0;
 	while (set[i])
 	{
-		if (c == set[i])
+		if (set[i] == c)
 			return (1);
 		i++;
 	}
@@ -28,38 +28,28 @@ int	checkset(char c, char const *set)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*tab;
-	size_t	end;
+	size_t	i;
 	size_t	start;
-	size_t	total;
-	int		i;
+	size_t	end;
+	char	*str;
 
-	if (!set || !s1)
+	if (!s1 || !set)
 		return (NULL);
 	start = 0;
-	while (s1[start] && checkset(s1[start], set))
+	while (s1[start] && is_in_set(s1[start], set))
 		start++;
-	end = ft_strlen(s1) - 1;
-	while (end != 0 && checkset(s1[end], set))
+	end = ft_strlen(s1);
+	while (end > start && is_in_set(s1[end - 1], set))
 		end--;
-	total = end - start + 1;
-	tab = malloc(sizeof(char) * total);
-	if (!tab)
+	str = malloc(end - start + 1);
+	if (!str)
 		return (NULL);
 	i = 0;
-	while (start <= end)
-		tab[i++] = s1[start++];
-	tab[i] = '\0';
-	return (tab);
+	while ((start + i) < end)
+	{
+		str[i] = s1[start + i];
+		i++;
+	}
+	str[i] = '\0';
+	return (str);
 }
-// #include <stdio.h>
-// int main ()
-// {
-//     char s1[] = " *** *** yassine**  ";
-//     char set[] = " *";
-
-//     char *trimmed = ft_strtrim(s1, set);
-//     printf("%s\n", trimmed);
-
-//     free(trimmed);
-// }

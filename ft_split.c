@@ -6,7 +6,7 @@
 /*   By: yaimghar <yaimghar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 16:08:27 by yaimghar          #+#    #+#             */
-/*   Updated: 2025/10/25 17:13:35 by yaimghar         ###   ########.fr       */
+/*   Updated: 2025/10/26 09:17:07 by yaimghar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,22 +91,3 @@ char	**ft_split(char const *s, char c)
 	tab[j] = 0;
 	return (tab);
 }
-
-// #include <stdio.h>
-// int	main(void)
-// {
-// 	char	str[] = ";;hello;world;;42;split;function;";
-// 	char	charset;
-// 	char	**result;
-// 	int		i;
-
-// 	charset = ';';
-// 	result = ft_split(str, charset);
-// 	i = 0;
-// 	while (result[i] != NULL)
-// 	{
-// 		printf("[%s]\n", result[i]);
-// 		i++;
-// 	}
-// 	return (0);
-// }

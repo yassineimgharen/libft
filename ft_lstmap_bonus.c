@@ -6,71 +6,37 @@
 /*   By: yaimghar <yaimghar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 10:27:41 by yaimghar          #+#    #+#             */
-/*   Updated: 2025/10/25 19:10:23 by yaimghar         ###   ########.fr       */
+/*   Updated: 2025/10/26 09:16:12 by yaimghar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*Upder(void *s)
-{
-	char	*str;
-	char	*new_char;
-	char	c;
-
-	str = (char *)s;
-	new_char = malloc(sizeof(char));
-	if (!new_char)
-		return (NULL);
-	c = str[0];
-	if (c >= 'a' && c <= 'z')
-		c = c - 32;
-	*new_char = c;
-	return (new_char);
-}
-
-void	ft_free(void *str)
-{
-	free(str);
-}
-
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*head;
-	t_list	*newnode;
-	void	*newcontent;
+	t_list	*new_l;
+	t_list	*new_n;
+	t_list	*con;
+	void	*new_c;
 
-	head = NULL;
 	if (!lst || !f || !del)
 		return (NULL);
-	while (lst)
+	con = lst;
+	new_l = NULL;
+	while (con)
 	{
-		newcontent = f(lst->content);
-		newnode = ft_lstnew(newcontent);
-		if (!newnode)
+		new_c = f(con->content);
+		new_n = ft_lstnew(new_c);
+		if (!new_n || !new_c)
 		{
-			del(newcontent);
-			ft_lstclear(&head, del);
+			free (new_c);
+			free (new_n);
+			ft_lstclear(&new_l, del);
 			return (NULL);
 		}
-		ft_lstadd_back(&head, newnode);
-		lst = lst->next;
+		else
+			ft_lstadd_back(&new_l, new_n);
+		con = con->next;
 	}
-	return (head);
-}
-
-int	main(void)
-{
-	t_list *head = ft_lstnew(ft_strdup("a"));
-	head->next = ft_lstnew(ft_strdup("b"));
-	head->next->next = ft_lstnew(ft_strdup("c"));
-	head->next->next->next = ft_lstnew(ft_strdup("d"));
-	head->next->next->next->next = ft_lstnew(ft_strdup("f"));
-
-	t_list *ptr = ft_lstmap(head, Upder, ft_free);
-	while (ptr)
-	{
-		printf("%s\n", (char *)ptr->content);
-		ptr = ptr->next;
-	}
+	return (new_l);
 }
